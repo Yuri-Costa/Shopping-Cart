@@ -19,17 +19,17 @@ namespace Carrinho_de_Compra.classes
         {
 
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("----------------------------");
-            Console.WriteLine("------------MENU------------");
-            Console.WriteLine("----------------------------");
+            Console.WriteLine("------------------------------");
+            Console.WriteLine("--------------MENU------------");
+            Console.WriteLine("------------------------------");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("CADASTRAR PRODUTO  ---> [1]");
-            Console.WriteLine("LISTAR PRODUTO     ---> [2]");
-            Console.WriteLine("REMOVER PRODUTO    ---> [3]");
-            Console.WriteLine("SUBSTITUIR PRODUTO ---> [4]");
-            Console.WriteLine("Parabéns para você ---> [5]");
-            Console.WriteLine("SAIR               ---> [0]");
-            Console.WriteLine("_____________________________");
+            Console.WriteLine("CADASTRAR PRODUTO     ---> [1]");
+            Console.WriteLine("LISTAR PRODUTO        ---> [2]");
+            Console.WriteLine("REMOVER PRODUTO       ---> [3]");
+            Console.WriteLine("SUBSTITUIR PRODUTO    ---> [4]");
+            Console.WriteLine("PARABÉNS PARA VOCÊ :) ---> [5]");
+            Console.WriteLine("SAIR                  ---> [0]");
+            Console.WriteLine("______________________________");
             int opcao = int.Parse(Console.ReadLine());
 
 
@@ -183,8 +183,9 @@ namespace Carrinho_de_Compra.classes
         //----------------------------------------------------------------------------------------------------
         public void MostrarLista()
         {
-            if (carrinho == null)
-            {
+            if (carrinho.Count == 0)
+            
+            {   Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Opa! voce não tem nenhum produto na lista :(");
             }
             else
