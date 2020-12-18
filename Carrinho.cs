@@ -1,10 +1,15 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Carrinho_de_Compra.classes
 {
     public class Carrinho
     {
+        private const string V = "[]";
         List<Produto> carrinho = new List<Produto>();
 
         //----------------------------------------------------------------------------------------------------
@@ -22,8 +27,9 @@ namespace Carrinho_de_Compra.classes
             Console.WriteLine("LISTAR PRODUTO     ---> [2]");
             Console.WriteLine("REMOVER PRODUTO    ---> [3]");
             Console.WriteLine("SUBSTITUIR PRODUTO ---> [4]");
+            Console.WriteLine("Parabéns para você ---> [5]");
             Console.WriteLine("SAIR               ---> [0]");
-            Console.WriteLine("--------------------------");
+            Console.WriteLine("_____________________________");
             int opcao = int.Parse(Console.ReadLine());
 
 
@@ -75,6 +81,16 @@ namespace Carrinho_de_Compra.classes
                      case 0:    Console.ForegroundColor = ConsoleColor.Green;
                                 Console.WriteLine("ATÉ A PROXIMA! :)");
 
+                    break;
+
+                     case 5:  
+                      Musiquinha();
+                    Console.WriteLine("deseja voltar para o menu? s/n");
+                    string resposta5 = Console.ReadLine();
+                    if (resposta5 == "s")
+                    {
+                        MostrarMenu();
+                    }
                     break;
 
 
@@ -161,18 +177,20 @@ namespace Carrinho_de_Compra.classes
             
             carrinho.Find(x => x.Codigo == _codigo ).Nome = newProduto.Nome;
             carrinho.Find(x => x.Codigo == _codigo ).preco = newProduto.preco;
-
-
+            carrinho.Find(x => x.Codigo == _codigo ).Codigo = newProduto.Codigo;
         }
 
         //----------------------------------------------------------------------------------------------------
         public void MostrarLista()
         {
-            if (carrinho != null)
+            if (carrinho == null)
+            {
+                Console.WriteLine("Opa! voce não tem nenhum produto na lista :(");
+            }
+            else
             {
                 foreach (var lista in carrinho)
                 {
-
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("");
                     Console.WriteLine("----------------------------------------------------------------------------");
@@ -182,10 +200,6 @@ namespace Carrinho_de_Compra.classes
                     Console.WriteLine($"Código: {lista.Codigo} -||- Nome: {lista.Nome} -||- Preço: R${lista.preco.ToString("n2")}");
                     Console.WriteLine("-------------------------------------------------------------------------------");
                 }
-            }
-            else
-            {
-                Console.WriteLine("Opa! voce não tem nenhum produto na lista :(");
             }
 
         }
@@ -220,7 +234,6 @@ namespace Carrinho_de_Compra.classes
                             {
                                 Console.WriteLine("Codigo não encontrado");
                             }
-                        
                     }
                     break;
 
@@ -236,16 +249,74 @@ namespace Carrinho_de_Compra.classes
                     break;
                 default:
                     break;
-
-
-
             }
         }
 
+        public void Musiquinha(){
+             Grasshoper();
 
+        }
 
-
-
-
+        private static void Grasshoper()
+        {
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("happy birthday! :)");
+            Console.ResetColor();
+            Thread.Sleep(2000);
+            Console.Beep(264, 125);
+            Thread.Sleep(250);
+            Console.Beep(264, 125);
+            Thread.Sleep(125);
+            Console.Beep(297, 500);
+            Thread.Sleep(125);
+            Console.Beep(264, 500);
+            Thread.Sleep(125);
+            Console.Beep(352, 500);
+            Thread.Sleep(125);
+            Console.Beep(330, 1000);
+            Thread.Sleep(250);
+            Console.Beep(264, 125);
+            Thread.Sleep(250);
+            Console.Beep(264, 125);
+            Thread.Sleep(125);
+            Console.Beep(297, 500);
+            Thread.Sleep(125);
+            Console.Beep(264, 500);
+            Thread.Sleep(125);
+            Console.Beep(396, 500);
+            Thread.Sleep(125);
+            Console.Beep(352, 1000);
+            Thread.Sleep(250);
+            Console.Beep(264, 125);
+            Thread.Sleep(250);
+            Console.Beep(264, 125);
+            Thread.Sleep(125);
+            Console.Beep(2642, 500);
+            Thread.Sleep(125);
+            Console.Beep(440, 500);
+            Thread.Sleep(125);
+            Console.Beep(352, 250);
+            Thread.Sleep(125);
+            Console.Beep(352, 125);
+            Thread.Sleep(125);
+            Console.Beep(330, 500);
+            Thread.Sleep(125);
+            Console.Beep(297, 1000);
+            Thread.Sleep(250);
+            Console.Beep(466, 125);
+            Thread.Sleep(250);
+            Console.Beep(466, 125);
+            Thread.Sleep(125);
+            Console.Beep(440, 500);
+            Thread.Sleep(125);
+            Console.Beep(352, 500);
+            Thread.Sleep(125);
+            Console.Beep(396, 500);
+            Thread.Sleep(125);
+            Console.Beep(352, 1000);
+        }
+    
+        
+        
     }
 }
