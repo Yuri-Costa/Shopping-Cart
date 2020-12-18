@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Timers;
+using static System.Console;
 
 namespace Carrinho_de_Compra.classes
 {
@@ -24,7 +26,7 @@ namespace Carrinho_de_Compra.classes
             Console.WriteLine("------------------------------");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("CADASTRAR PRODUTO     ---> [1]");
-            Console.WriteLine("LISTAR PRODUTO        ---> [2]");
+            Console.WriteLine("CARRINHO              ---> [2]");
             Console.WriteLine("REMOVER PRODUTO       ---> [3]");
             Console.WriteLine("SUBSTITUIR PRODUTO    ---> [4]");
             Console.WriteLine("PARABÉNS PARA VOCÊ :) ---> [5]");
@@ -44,6 +46,10 @@ namespace Carrinho_de_Compra.classes
                     if (resposta1 == "s")
                     {
                         MostrarMenu();
+                    }else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                                Console.WriteLine("ATÉ A PROXIMA! :)");
                     }
                     break;
 
@@ -54,6 +60,10 @@ namespace Carrinho_de_Compra.classes
                     if (resposta2 == "s")
                     {
                         MostrarMenu();
+                    }else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                                Console.WriteLine("ATÉ A PROXIMA! :)");
                     }
                     break;
 
@@ -64,6 +74,10 @@ namespace Carrinho_de_Compra.classes
                     if (resposta3 == "s")
                     {
                         MostrarMenu();
+                    }else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                                Console.WriteLine("ATÉ A PROXIMA! :)");
                     }
                     break;
 
@@ -76,6 +90,10 @@ namespace Carrinho_de_Compra.classes
                     if (resposta4 == "s")
                     {
                         MostrarMenu();
+                    }else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                                Console.WriteLine("ATÉ A PROXIMA! :)");
                     }
                     break;
                      case 0:    Console.ForegroundColor = ConsoleColor.Green;
@@ -90,6 +108,10 @@ namespace Carrinho_de_Compra.classes
                     if (resposta5 == "s")
                     {
                         MostrarMenu();
+                    }else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                                Console.WriteLine("ATÉ A PROXIMA! :)");
                     }
                     break;
 
@@ -103,6 +125,8 @@ namespace Carrinho_de_Compra.classes
 
         public void AlterarItem(){
              //------------------------------------------------
+             if (carrinho.Count != 0)
+            {
              Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("ok! vamos alterar seus produtos!");
             Console.WriteLine(" Para começar, digite o codigo produto que voce deseja alterar");
@@ -124,6 +148,12 @@ namespace Carrinho_de_Compra.classes
             Substituir(Acodigo, newP);
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine("Ótimo! seu produto foi alterado com sucesso :)");
+            }else
+            {   Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Opa! voce não possui nenhum produto no carrinho :(");
+                Console.WriteLine("Cadastre um produto primeiro para altera-lo:(");
+                Console.ResetColor();
+            }
                     
                 
             //------------------------------------------------
@@ -147,6 +177,7 @@ namespace Carrinho_de_Compra.classes
 
         public void Cadastrarproduto()
         {
+            
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("ok! vamos cadastrar seus produtos!");
             Console.WriteLine(" Para começar, digite o codigo do seu produto");
@@ -166,6 +197,8 @@ namespace Carrinho_de_Compra.classes
             Produto p = new Produto(CPcodigo, CPnome, CPpreco);
             carrinho.Add(p);
             Console.WriteLine("Ótimo! seu produto foi cadastrado com sucesso :)");
+                
+            
         }
 
 
@@ -174,19 +207,26 @@ namespace Carrinho_de_Compra.classes
 
         public void Substituir(int _codigo, Produto newProduto)
         {
-            
+            if (carrinho.Count != 0)
+            {
             carrinho.Find(x => x.Codigo == _codigo ).Nome = newProduto.Nome;
             carrinho.Find(x => x.Codigo == _codigo ).preco = newProduto.preco;
             carrinho.Find(x => x.Codigo == _codigo ).Codigo = newProduto.Codigo;
+        }else
+        {   Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("opa! voce não tem nenhum produto no carrinho para alterar!");
+            Console.WriteLine("Cadastre um produto primeiro para altera-lo:(");
+            Console.ResetColor();
+        }
         }
 
         //----------------------------------------------------------------------------------------------------
         public void MostrarLista()
         {
             if (carrinho.Count == 0)
-            
+
             {   Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("Opa! voce não tem nenhum produto na lista :(");
+                Console.WriteLine("Opa! voce não tem nenhum produto no carrinho :(");
             }
             else
             {
@@ -255,9 +295,7 @@ namespace Carrinho_de_Compra.classes
 
         public void Musiquinha(){
              Grasshoper();
-
         }
-
         private static void Grasshoper()
         {
             Console.ForegroundColor = ConsoleColor.Magenta;
