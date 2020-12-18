@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dev\\Desktop\\carrinho de compra\\carrinho de compra.csproj",
+      "projectUniqueName": "C:\\Users\\dev\\Desktop\\Shopping Cart##\\carrinho de compra.csproj",
       "projectName": "carrinho de compra",
-      "projectPath": "C:\\Users\\dev\\Desktop\\carrinho de compra\\carrinho de compra.csproj",
+      "projectPath": "C:\\Users\\dev\\Desktop\\Shopping Cart##\\carrinho de compra.csproj",
       "packagesPath": "C:\\Users\\dev\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dev\\Desktop\\carrinho de compra\\obj\\",
+      "outputPath": "C:\\Users\\dev\\Desktop\\Shopping Cart##\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dev\\AppData\\Roaming\\NuGet\\NuGet.Config"

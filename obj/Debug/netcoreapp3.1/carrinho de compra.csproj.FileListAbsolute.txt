@@ -11,3 +11,16 @@ C:\Users\dev\Desktop\carrinho de compra\obj\Debug\netcoreapp3.1\carrinho de comp
 C:\Users\dev\Desktop\carrinho de compra\obj\Debug\netcoreapp3.1\carrinho de compra.dll
 C:\Users\dev\Desktop\carrinho de compra\obj\Debug\netcoreapp3.1\carrinho de compra.pdb
 C:\Users\dev\Desktop\carrinho de compra\obj\Debug\netcoreapp3.1\carrinho de compra.genruntimeconfig.cache
+C:\Users\dev\Desktop\Shopping Cart##\bin\Debug\netcoreapp3.1\carrinho de compra.exe
+C:\Users\dev\Desktop\Shopping Cart##\bin\Debug\netcoreapp3.1\carrinho de compra.deps.json
+C:\Users\dev\Desktop\Shopping Cart##\bin\Debug\netcoreapp3.1\carrinho de compra.runtimeconfig.json
+C:\Users\dev\Desktop\Shopping Cart##\bin\Debug\netcoreapp3.1\carrinho de compra.runtimeconfig.dev.json
+C:\Users\dev\Desktop\Shopping Cart##\bin\Debug\netcoreapp3.1\carrinho de compra.dll
+C:\Users\dev\Desktop\Shopping Cart##\bin\Debug\netcoreapp3.1\carrinho de compra.pdb
+C:\Users\dev\Desktop\Shopping Cart##\obj\Debug\netcoreapp3.1\carrinho de compra.csprojAssemblyReference.cache
+C:\Users\dev\Desktop\Shopping Cart##\obj\Debug\netcoreapp3.1\carrinho de compra.AssemblyInfoInputs.cache
+C:\Users\dev\Desktop\Shopping Cart##\obj\Debug\netcoreapp3.1\carrinho de compra.AssemblyInfo.cs
+C:\Users\dev\Desktop\Shopping Cart##\obj\Debug\netcoreapp3.1\carrinho de compra.csproj.CoreCompileInputs.cache
+C:\Users\dev\Desktop\Shopping Cart##\obj\Debug\netcoreapp3.1\carrinho de compra.dll
+C:\Users\dev\Desktop\Shopping Cart##\obj\Debug\netcoreapp3.1\carrinho de compra.pdb
+C:\Users\dev\Desktop\Shopping Cart##\obj\Debug\netcoreapp3.1\carrinho de compra.genruntimeconfig.cache

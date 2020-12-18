@@ -100,8 +100,8 @@ namespace Carrinho_de_Compra.classes
             Console.WriteLine("agora insira o novo preço do seu produto");
             float NEWpreco = int.Parse(Console.ReadLine());
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($" Preço de [R${NEWcodigo}] cadastrado :)");
-            Console.WriteLine($" Preço de [R${NEWnome}] cadastrado :)");
+            Console.WriteLine($" Código [{NEWcodigo}] cadastrado :)");
+            Console.WriteLine($" Nome [{NEWnome}] cadastrado :)");
             Console.WriteLine($" Preço de [R${NEWpreco}] cadastrado :)");
          
             Produto newP = new Produto(NEWcodigo, NEWnome, NEWpreco);
@@ -185,7 +185,7 @@ namespace Carrinho_de_Compra.classes
             }
             else
             {
-                Console.WriteLine("Opa! voce ainda não tem nenhum produto na lista :(");
+                Console.WriteLine("Opa! voce não tem nenhum produto na lista :(");
             }
 
         }
@@ -208,21 +208,19 @@ namespace Carrinho_de_Compra.classes
                     int remo = int.Parse(Console.ReadLine());
                     foreach (var p in carrinho)
                     {
-                        if (string.IsNullOrEmpty(p.Nome))
-                        {
-
                             if (p.Codigo == remo)
                             {
                                 carrinho.Remove(p);
                                 Console.ForegroundColor = ConsoleColor.Green;
                                 Console.WriteLine($"item {remo} removido!");
                                 Console.ResetColor();
+                                break;
                             }
                             else
                             {
                                 Console.WriteLine("Codigo não encontrado");
                             }
-                        }
+                        
                     }
                     break;
 
@@ -233,6 +231,7 @@ namespace Carrinho_de_Compra.classes
                         carrinho.Clear();
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("todos os itens removidos");
+                        break;
                     }
                     break;
                 default:
